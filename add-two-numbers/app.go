@@ -31,7 +31,7 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode, inc ...int) *ListNode {
 
 	incTmp := 0
 	if intTmp >= 10 {
-		intTmp = intTmp % 10
+		intTmp = intTmp - 10
 		incTmp = 1
 	} 
 	l3 = &ListNode{Val:intTmp,}
