@@ -33,4 +33,7 @@ func main() {
 	println(reverse(100))
 	println(reverse(-9876))
 	println(reverse(1563847412))
+
+	// 输出2^31次方值
+	println(2<<30)
 }
