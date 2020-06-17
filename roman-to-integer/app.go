@@ -17,8 +17,20 @@ func romanToInt(s string) int {
 
 		switch strTmp {
 			case "C":
+				if (i+1) < len(s) && (string(s[i+1]) == "M" || string(s[i+1]) == "D") {
+						pre = "C"
+						continue
+				}
 			case "X":
+				if (i+1) < len(s) && (string(s[i+1]) == "C" || string(s[i+1]) == "L") {
+					pre = "X"
+					continue
+			}
 			case "I":
+				if (i+1) < len(s) && (string(s[i+1]) == "X" || string(s[i+1]) == "V") {
+					pre = "I"
+					continue
+			}
 		}
 
 		switch strTmp {
@@ -64,8 +76,8 @@ func main()  {
 	// romanToInt("VIII")
 	doPrint("III")
 	doPrint("IV")
-	// doPrint("VII")
-	// doPrint("IX")
-	// doPrint("LVIII")
-	// doPrint("MCMXCIV")
+	doPrint("VII")
+	doPrint("IX")
+	doPrint("LVIII")
+	doPrint("MCMXCIV")
 }
